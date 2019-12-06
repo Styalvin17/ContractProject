@@ -8,7 +8,7 @@
 
     <!--welcome pages-->
     <welcome-file-list>
-        <welcome-file>index.jsp</welcome-file>
+        <welcome-file>WEB-INF/statics/html/UserManage/UserManage.html</welcome-file>
     </welcome-file-list>
 
     <!--配置springmvc DispatcherServlet-->
@@ -27,6 +27,13 @@
         <servlet-name>springMVC</servlet-name>
         <url-pattern>/</url-pattern>
     </servlet-mapping>
+
+    <!--访问html配置-->
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>*.html</url-pattern>
+    </servlet-mapping>
+
     <!--把applicationContext.xml加入到配置文件中-->
     <context-param>
         <param-name>contextConfigLocation</param-name>
