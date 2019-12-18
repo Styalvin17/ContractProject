@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html lang="jp"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Login</title>'[
+    <link rel="stylesheet" href="css/mvo4ken.css">
+    <link rel="stylesheet" href="css/style_min.css" type="text/css">
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css">
+    <script type="text/javascript" async="" src="js/analytics.js"></script>
+	<script type="text/javascript" async="" src="bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/loginandregister.js"></script>
+    <script src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
+    <script type="text/javascript" src="JSON/json2.js"></script>
+	<script async="" src="js/js"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-112735579-1');
+
+    </script>
+
+</head>
+
+<body style="height: 15057px;">
+   
+    <div id="js-pjax-cont" aria-live="polite">
+        <div class="container under-contents is-ready">
+            
+            <div class="js-nav-clip" style="clip: rect(0px, 1536px, 432.5px, 0px);">
+			    <div class="nav-right is-white">
+			        <a href="https://dff.mitsugutakahashi.com/about/">ABOUT</a>
+			        <a href="mailto:info@mitsugutakahashi.com">CONTACT</a>
+			    </div>
+			    <a href="index.html" class="nav-back is-white">BACK</a>
+			</div>
+			<div class="nav-right">
+			    <a href="https://dff.mitsugutakahashi.com/about/">ABOUT</a>
+			    <a href="mailto:info@mitsugutakahashi.com">CONTACT</a>
+			</div>
+			<a href="index.html" class="nav-back">BACK</a>
+            <div id="js-main-img" class="main-img" style="transform: matrix(1, 0, 0, 1, 0, -20);"><img src="img/main(1).jpg" style="transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+            <div id="js-top-opacity" class="project-lead-wrap js-txt-in" style="opacity: 0;">
+                <h3 class="project-ttl is-hide" >Login</h3>
+                <p class="txt en is-hide">Welcome to the contract management system. After logging in, you will be able to use the system.If you do not have an account, click the registration button below to register.</p>
+            </div>
+			
+            <span class="scroll is-left"></span>
+            <section id="js-scroll" class="page-project" style="transform: translateY(-399px) translateZ(0px);">
+                <div class="project-detail">
+                    <div class="txt-sub mt0">
+                        <!-- <span class="num font-small">FOCUS 01</span>
+                        <strong class="font-large">Bringing quiet to the digital</strong>
+                        <p class="font-large">The first. The current one is too complicated and the navigation is messy, so what I focused on the most was making the overall interaction pleasant.</p> -->
+						<div class="input-group">
+						        <span class="input-group-addon">username</span>
+						        <input id="login_username" type="text" class="form-control">
+						       
+						</div>
+						<br />
+						<br />
+						<div class="input-group">
+						        <span class="input-group-addon">password</span>
+						        <input id="login_password" type="text" class="form-control">
+						            
+						</div>
+						<br />
+						<br />
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<button id="login" type="button" class="btn btn-primary" onclick="log_in()">LOGIN</button>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<button id="reset" type="button" class="btn btn-info">RESET</button>
+					</div>
+    
+                    <a href="register.html" id="js-next" class="next js-next-in is-ready">
+                        <p class="next-txt is-hide">Go to register</p>
+                        <svg class="writing fill-white is-hide">
+                            <use xlink:href="#icon-next"></use>
+                        </svg>
+                        <div id="next-panel-black">
+                            <div class="wrap">
+                                <span id="next-panel01" style="transform: translate3d(0px, 0px, 0px);"></span>
+                            </div>
+                            <div class="wrap">
+                                <span id="next-panel02" style="transform: translate3d(0px, 0px, 0px);"></span>
+                            </div>
+                            <div class="wrap">
+                                <span id="next-panel03" style="transform: translate3d(0px, 0px, 0px);"></span>
+                            </div>
+                        </div>
+                        <p id="js-next-img" class="img" style="transform: matrix(2.89223, 0, 0, 2.89223, 0, 0);">
+							<img src="img/main(1).jpg"></p>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div id="progress" class="is-hide"><span class="num">100</span></div>
+<div id="js-layer">
+	<span id="panel01" style="transform: translate(0%, -100%) matrix(1, 0, 0, 1, 0, 0);"></span>
+	<span id="panel02" style="transform: translate(0%, -100%) matrix(1, 0, 0, 1, 0, 0);"></span>
+	<span id="panel03" style="transform: translate(0%, -100%) matrix(1, 0, 0, 1, 0, 0);"></span>
+</div>
+<div id="js-cusor" style="display: none;"><span class="arw"></span></div>
+ <script src="js/jquery-2.2.4.min.js"></script>
+ <script type="text/javascript" src="js/plugin.js"></script>
+ <script src="js/polyfill.min.js"></script>
+ <script type="text/javascript" src="js/app_min.js"></script>
+
+
+</body></html>

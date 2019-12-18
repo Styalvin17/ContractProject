@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--    <title>SVG Shape Overlays | Demo 1</title>-->
+
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400|Montserrat:700" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+    <link rel="stylesheet" type="text/css" href="main_css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="main_css/demo.css" />
+    <!--    <link rel="stylesheet" type="text/css" href="main_css/mypage.css">-->
+
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+    <script src="https://cdn.bootcss.com/datatables/1.10.16/js/jquery.dataTables.js"></script>
+
+    <title>Allocate Manage</title>
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.15/css/jquery.dataTables.css">
+
+    <!-- jQuery -->
+    <script type="text/javascript" charset="utf8" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+
+    <!-- DataTables -->
+    <script type="text/javascript" charset="utf8" src="http://cdn.datatables.net/1.10.15/js/jquery.dataTables.js"></script>
+
+<!--    <style>-->
+<!--        .content {-->
+<!--            margin: 50px auto;-->
+<!--            border: 1px solid #ccc;-->
+<!--        }-->
+
+<!--        .operation {-->
+<!--            margin: 10px;-->
+<!--        }-->
+
+<!--        .operation > button {-->
+<!--            margin: 10px;-->
+<!--        }-->
+
+<!--        #Contracts_length {-->
+<!--            float: left;-->
+<!--            margin-left: 20px;-->
+<!--        }-->
+
+<!--        #Contracts_filter {-->
+<!--            float: right;-->
+<!--            margin-right: 20px;-->
+<!--        }-->
+
+<!--        #Contracts {-->
+<!--            margin: 5px;-->
+<!--        }-->
+
+<!--        .center-block {-->
+<!--            display: block;-->
+<!--            width: 21%;-->
+<!--            margin: auto;-->
+<!--        }-->
+<!--    </style>-->
+
+    <style>
+        .black_overlay{
+            display: none;
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            z-index:1001;
+            -moz-opacity: 0.8;
+            opacity:.80;
+            filter: alpha(opacity=80);
+        }
+        .white_content {
+            display: none;
+            position: absolute;
+            top: 10%;
+            left: 10%;
+            width: 80%;
+            height: 80%;
+            border: 16px solid lightblue;
+            background-color: white;
+            z-index:1002;
+            overflow: auto;
+        }
+
+        #wrapper{
+            width:1200px;
+            margin:0 auto;
+            margin-bottom:15px;
+        }
+
+        .main2{
+            width:1200px;
+            background-color:white;
+            border-radius:8px;
+            float:left;
+            padding:20px;
+        }
+
+    </style>
+
+    <script type="text/javascript">
+        //弹出隐藏层
+        function ShowDiv(show_div,bg_div){
+            document.getElementById(show_div).style.display='block';
+            document.getElementById(bg_div).style.display='block' ;
+            var bgdiv = document.getElementById(bg_div);
+            bgdiv.style.width = document.body.scrollWidth;
+// bgdiv.style.height = $(document).height();
+            $("#"+bg_div).height($(document).height());
+        };
+        //关闭弹出层
+        function CloseDiv(show_div,bg_div)
+        {
+            document.getElementById(show_div).style.display='none';
+            document.getElementById(bg_div).style.display='none';
+
+            location.reload();
+        };
+    </script>
+
+    <!--    <script>document.documentElement.className = 'js';</script>-->
+    <script>
+        var navhtml='';
+        function getParams(key) {
+            var reg = new RegExp("(^|&)" + key + "=([^&]*)(&|$)");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) {
+                return unescape(r[2]);
+            }
+            return null;
+        };
+        window.onload=function () {
+            alert("begin");
+            var auth=getParams("auth");
+
+            alert("begin");
+            for(var i=0;i<auth.split(",").length;i++){
+                if(auth.split(",")[i]!=null){
+                    var mynav=document.getElementById("js-nav");
+                    var framea = document.createElement("a");
+                    var framespan = document.createElement("span");
+                    framespan.innerHTML=auth.split(",")[i];
+                    framea.setAttribute("class","demo");
+                    framea.setAttribute("href","index2.html");
+                    framea.appendChild(framespan);
+
+                    mynav.appendChild(framea);
+                }
+            }
+            alert(navhtml);
+        };
+
+    </script>
+</head>
+<body class="demo-1">
+
+<main class="main main--demo-1">
+
+    <div class="content content--fixed">
+
+        <nav id="js-nav" class="demos">
+            <a class="demo demo--current" href="main.index.html"><span>首页</span></a>
+        </nav>
+
+    </div>
+
+    <div class="content content--demo-1">
+        <div class="hamburger js-hover">
+            <div class="hamburger__line hamburger__line--01">
+                <div class="hamburger__line-in hamburger__line-in--01"></div>
+            </div>
+            <div class="hamburger__line hamburger__line--02">
+                <div class="hamburger__line-in hamburger__line-in--02"></div>
+            </div>
+            <div class="hamburger__line hamburger__line--03">
+                <div class="hamburger__line-in hamburger__line-in--03"></div>
+            </div>
+            <div class="hamburger__line hamburger__line--cross01">
+                <div class="hamburger__line-in hamburger__line-in--cross01"></div>
+            </div>
+            <div class="hamburger__line hamburger__line--cross02">
+                <div class="hamburger__line-in hamburger__line-in--cross02"></div>
+            </div>
+        </div>
+        <!--        <div class="demo-title demo-title&#45;&#45;demo-1">Hello!</div>-->
+
+
+        <div id="wrapper">
+            <div class="main2">
+                <center><h1 style="color:olivedrab;">待分配合同列表</h1></center>
+                <section>
+
+                    <!--顶部按钮-->
+                    <div class="btn-group operation">
+                        <button id="btn_edit" type="button" class="btn bg-info">
+                            <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>修改
+                        </button>
+                        <button id="btn_delete" type="button" class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>删除
+                        </button>
+                        <button id="btn_check" type="button" class="btn btn-success">
+                            <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>预览
+                        </button>
+                        <button id="btn_allot" type="button" class="btn btn-success">
+                            <span class="glyphicon glyphicon-eye-info" aria-hidden="true"></span>分配
+                        </button>
+                    </div>
+                    <a id="btn_signlist" type="button" href="signList.html">会签列表
+                    </a>
+
+                    <!--添加-->
+                    <div class="modal fade" id="addContract" role="dialog">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">添加合同</h4>
+                                </div>
+                                <div id="addContractModal" class="modal-body">
+                                    <div class="form-horizontal">
+                                        <div class="form-group">
+                                            <label for="contractId" class="col-sm-2 control-label">合同编号:*</label>
+                                            <div class="col-sm-10">
+                                                <input name="contractId" class="form-control" id="contractId" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="contractName" class="col-sm-2 control-label">合同名称:*</label>
+                                            <div class="col-sm-10">
+                                                <input name="contractName" class="form-control" id="contractName" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="customer" class="col-sm-2 control-label">客户:*</label>
+                                            <div class="col-sm-10">
+                                                <input name="customer" class="form-control" id="customer" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="beginTime" class="col-sm-2 control-label">开始时间:*</label>
+                                            <div class="col-sm-10">
+                                                <input name="beginTime" class="form-control" id="beginTime" type="datetime-local">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="endTime" class="col-sm-2 control-label">结束时间:*</label>
+                                            <div class="col-sm-10">
+                                                <input name="endTime" class="form-control" id="endTime" type="datetime-local">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="contractContent" class="col-sm-2 control-label">内容:*</label>
+                                            <div class="col-sm-10">
+                            <textarea name="contractContent" id="contractContent" type="text" rows="5"
+                                      class="form-control">
+                        </textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="username" class="col-sm-2 control-label">用户名:*</label>
+                                            <div class="col-sm-10">
+                                                <input name="username" id="username" type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="attachment" class="col-sm-2 control-label">附件:</label>
+                                            <div class="col-sm-10">
+                                                <input name="attachment" id="attachment" type="file" class="form-control"
+                                                       placeholder="用户名">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <div class="center-block">
+                                        <button id="cancelAdd" type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                        <button id="addContractsInfo" type="button" class="btn btn-success" data-dismiss="modal">保存
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--编辑-->
+                    <div class="modal fade" id="editContractInfo" role="dialog">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">修改内容</h4>
+                                </div>
+                                <div id="editContractModal" class="modal-body">
+                                    <div class="form-horizontal">
+                                        <div class="form-group">
+                                            <label for="editContractId" class="col-sm-2 control-label">合同编号:*</label>
+                                            <div class="col-sm-10">
+                                                <input name="contractId" class="form-control" id="editContractId" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="editContractName" class="col-sm-2 control-label">合同名称:*</label>
+                                            <div class="col-sm-10">
+                                                <input name="contractName" class="form-control" id="editContractName" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="editCustomer" class="col-sm-2 control-label">客户:*</label>
+                                            <div class="col-sm-10">
+                                                <input name="customer" class="form-control" id="editCustomer" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="editBeginTime" class="col-sm-2 control-label">开始时间:*</label>
+                                            <div class="col-sm-10">
+                                                <input name="beginTime" class="form-control" id="editBeginTime" type="datetime-local">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="editEndTime" class="col-sm-2 control-label">结束时间:*</label>
+                                            <div class="col-sm-10">
+                                                <input name="endTime" class="form-control" id="editEndTime" type="datetime-local">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="editContractContent" class="col-sm-2 control-label">内容:*</label>
+                                            <div class="col-sm-10">
+                            <textarea name="contractContent" id="editContractContent" type="text" rows="5"
+                                      class="form-control"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="editUsername" class="col-sm-2 control-label">用户名:*</label>
+                                            <div class="col-sm-10">
+                                                <input name="username" id="editUsername" type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="editEttachment" class="col-sm-2 control-label">更新附件:</label>
+                                            <div class="col-sm-10">
+                                                <input name="attachment" id="editEttachment" type="file" class="form-control"
+                                                       placeholder="用户名">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <div class="center-block">
+                                        <button id="cancelEdit" type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                        <button id="saveEdit" type="button" class="btn btn-success" data-dismiss="modal">保存</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--删除-->
+                    <div class="modal fade" id="deleteContract" role="dialog">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">确认要删除吗？</h4>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                    <button id="delete" type="button" class="btn btn-danger" data-dismiss="modal">删除</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--分配-->
+                    <div class="modal fade" id="allotContract" role="dialog">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">确认要分配吗？</h4>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                    <button id="allot" type="button" class="btn btn-info" data-dismiss="modal">分配</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--预览-->
+                    <div class="modal fade" id="checkContractInfo" role="dialog">
+                        <div class="modal-dialog">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">预览合同</h4>
+                                    </div>
+                                    <div id="checkContractModal" class="modal-body">
+                                        <div class="form-horizontal">
+                                            <div class="form-group">
+                                                <label for="checkContractId" class="col-sm-2 control-label">合同编号:*</label>
+                                                <div class="col-sm-10">
+                                                    <input name="contractId" class="form-control" id="checkContractId" type="text"
+                                                           disabled>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="checkContractName" class="col-sm-2 control-label">合同名称:*</label>
+                                                <div class="col-sm-10">
+                                                    <input name="contractName" class="form-control" id="checkContractName" type="text"
+                                                           disabled>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="checkCustomer" class="col-sm-2 control-label">客户:*</label>
+                                                <div class="col-sm-10">
+                                                    <input name="customer" class="form-control" id="checkCustomer" type="text" disabled>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="checkBeginTime" class="col-sm-2 control-label">开始时间:*</label>
+                                                <div class="col-sm-10">
+                                                    <input name="beginTime" class="form-control" id="checkBeginTime"
+                                                           type="datetime-local" disabled>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="checkEndTime" class="col-sm-2 control-label">结束时间:*</label>
+                                                <div class="col-sm-10">
+                                                    <input name="endTime" class="form-control" id="checkEndTime" type="datetime-local"
+                                                           disabled>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="checkContractContent" class="col-sm-2 control-label">内容:*</label>
+                                                <div class="col-sm-10">
+                            <textarea name="contractContent" id="checkContractContent" type="text" rows="5"
+                                      class="form-control" disabled></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="checkUsername" class="col-sm-2 control-label">用户名:*</label>
+                                                <div class="col-sm-10">
+                                                    <input name="username" id="checkUsername" type="text" class="form-control" disabled>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="checkAttachment" class="col-sm-2 control-label">附件:</label>
+                                                <div class="col-sm-10">
+                                                    <input name="attachment" id="checkAttachment" type="file" class="form-control"
+                                                           placeholder="用户名" disabled>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <div class="center-block">
+                                            <button id="checkConfirm" type="button" class="btn btn-default" data-dismiss="modal">确定
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--会签-->
+                    <div class="modal fade" id="signContractInfo" role="dialog">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">修改内容</h4>
+                                </div>
+                                <div id="signContractModal" class="modal-body">
+                                    <div class="form-horizontal">
+                                        <div class="form-group">
+                                            <label for="signContractId" class="col-sm-2 control-label">合同编号:*</label>
+                                            <div class="col-sm-10">
+                                                <input name="contractId" class="form-control" id="signContractId" type="text" readonly>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="signContractName" class="col-sm-2 control-label">合同名称:*</label>
+                                            <div class="col-sm-10">
+                                                <input name="contractName" class="form-control" id="signContractName" type="text"
+                                                       readonly>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="signProcessContent" class="col-sm-2 control-label">会签内容:*</label>
+                                            <div class="col-sm-10">
+                            <textarea name="processContent" id="signProcessContent" type="text" rows="5"
+                                      class="form-control"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="signUsername" class="col-sm-2 control-label">用户名:*</label>
+                                            <div class="col-sm-10">
+                                                <input name="username" id="signUsername" type="text" class="form-control" readonly>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <div class="center-block">
+                                        <button id="cancelsign" type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                        <button id="savesign" type="button" class="btn btn-success" data-dismiss="modal">保存</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--表格-->
+                    <table id="Contracts" class="table table-striped table-bordered row-border hover order-column" cellspacing="0"
+                           width="100%">
+                        <thead>
+                        <tr>
+                            <th>序号</th>
+                            <th>合同编号</th>
+                            <th>合同名称</th>
+                            <th>客户</th>
+                            <th>开始时间</th>
+                            <th>结束时间</th>
+                            <th>内容</th>
+                            <th>用户名</th>
+                        </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </section>
+            </div>
+        </div>
+
+        <!--        <div id="wrapper">-->
+        <!--            <div class="main2">-->
+        <!--            </div>-->
+        <!--        </div>-->
+
+
+
+
+        <div class="global-menu">
+            <div class="global-menu__wrap">
+                <a class="global-menu__item global-menu__item--demo-1" href="#">Login</a>
+                <a class="global-menu__item global-menu__item--demo-1" href="#">Register</a>
+            </div>
+        </div>
+        <svg class="shape-overlays" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <path class="shape-overlays__path"></path>
+            <path class="shape-overlays__path"></path>
+            <path class="shape-overlays__path"></path>
+        </svg>
+    </div>
+
+</main>
+
+<script src="main_js/demo.js"></script>
+<script src="main_js/easings.js"></script>
+<script src="main_js/demo1.js"></script>
+
+</body>
+
+<script>
+    //请求数据
+    //所有的
+    var allUrl = '';
+    //为分配的
+    var unsignUrl = '';
+    //增加会签url
+    var signUrl = '';
+    //====================================================
+    //初始数据
+    var data = [];
+    var table;
+    //----------------------------
+    //模拟的数据，与后台对接之后注释即可
+    //--------------------------
+    //从后端获取数据
+
+    //====================================================
+    var titles = ['合同编号', '合同名称', '客户', '开始时间', '结束时间', '内容', '用户名']
+    $(function () {
+        //datatable
+        //测试数据，data.json替换成你的初始页面的url
+        drawTable("data.json");
+        //选择
+        $('#Contracts tbody').on('click', 'tr', function () {
+            if ($(this).hasClass('selected')) {
+                $(this).removeClass('selected');
+            }
+            else {
+                table.$('tr.selected').removeClass('selected');
+                $(this).addClass('selected');
+            }
+        });
+
+        //============================
+        //按钮点击
+        //=============================
+        //点击新增
+        $("#btn_add").click(function () {
+            console.log('add');
+            jsonToArray(data);
+            $("#addContract").modal()
+        });
+        //取消添加
+        $("#cancelAdd").on('click', function () {
+            console.log('cancelAdd');
+            $("#addContractModal").find('input').val('')
+        })
+        //添加操作
+        $("#addContractsInfo").on('click', function () {
+            console.log('addContractsInfo');
+            if ($("#addContractModal").find('input').val() !== '') {
+                var contractId = $("#contractId").val()
+                var contractName = $("#contractName").val()
+                var customer = $("#customer").val()
+                var beginTime = $("#beginTime").val()
+                var endTime = $("#endTime").val()
+                var contractContent = $("#contractContent").val()
+                var username = $("#username").val()
+                var addContract = [].concat(contractId, contractName, customer, beginTime, endTime, contractContent, username);
+                console.log(addContract);
+                console.log(customer);
+                for (var i = 0; i < addContract.length; i++) {
+                    if (addContract[i] === '') {
+                        alert(titles[i] + '内容不能为空')
+                    }
+                }
+                table.row.add(['', contractId, contractName, customer, beginTime, endTime, contractContent, username]).draw();
+                $("#addContractModal").find('input').val('')
+
+                //=============================================
+                //添加,提交数据到服务器
+
+                $(document).ready(function () {
+                    var formData = new FormData();
+                    formData.append("contractId", $("#contractId").val());
+                    formData.append("contractName", $("#contractName").val());
+                    formData.append("customer", $("#customer").val());
+                    formData.append("beginTime", $("#beginTime").val());
+                    formData.append("endTime", $("#endTime").val());
+                    formData.append("contractContent", $("#contractContent").val());
+                    formData.append("username", $("#username").val());
+                    var file_obj = document.getElementById('attachment').files[0];
+                    formData.append("attachment", file_obj);
+                    console.log(formData);
+                // formdata转json（后续换成字符串）
+                var jsonData = {};
+                formData.forEach((value, key) => jsonData[key] = value);
+                    //提交数据到服务器
+                    $.ajax({
+                        type: "POST",
+                        url: "",
+                        data: formData,//提交数据
+                        contentType : "application/json",
+                        dataType: "json",//回调函数接收数据的格式
+                        success: function (data) {
+                            alert(data.msg);
+                            count++;
+                        },
+                        error: function (msg) {
+                            alert(msg);
+                            console.log("request fail:" + msg);
+                        }
+                    });
+                });
+
+
+                //==================================
+            }
+        });
+
+        //点击修改
+        $('#btn_edit').click(function () {
+            console.log('edit');
+            if (table.rows('.selected').data().length) {
+                $("#editContractInfo").modal()
+                var rowData = table.rows('.selected').data()[0];
+                var inputs = $("#editContractModal").find('input')
+                for (var i = 0; i < inputs.length - 1; i++) {
+                    if (i == 5) {
+                        $("#editContractContent").val(rowData[i + 1]);
+                        console.log(rowData[i + 1])
+                        $(inputs[i]).val(rowData[i + 2])
+                    } else {
+                        $(inputs[i]).val(rowData[i + 1])
+                    }
+                }
+            } else {
+                alert('请选择项目');
+            }
+        });
+        //点击保存修改
+        $("#saveEdit").click(function () {
+            var contractId = $("#editContractId").val()
+            var contractName = $("#editContractName").val()
+            var customer = $("#editCustomer").val()
+            var beginTime = $("#editBeginTime").val()
+            var endTime = $("#editEndTime").val()
+            var contractContent = $("#editContractContent").val()
+            var username = $("#editUsername").val()
+            var newRowData = [].concat(contractId, contractName, customer, beginTime, endTime, contractContent, username);
+            var tds = Array.prototype.slice.call($('.selected td'))
+            for (var i = 0; i < newRowData.length; i++) {
+                if (newRowData[i] !== '') {
+                    tds[i + 1].innerHTML = newRowData[i];
+
+                } else {
+                    alert(titles[i] + '内容不能为空')
+                }
+            }
+
+            //    ======================================
+            //    保存修改提交到服务器
+
+            $(document).ready(function () {
+                var formData = new FormData();
+                formData.append("contractId", $("#editContractId").val());
+                formData.append("contractName", $("#editContractName").val());
+                formData.append("customer", $("#editCustomer").val());
+                formData.append("beginTime", $("#editBeginTime").val());
+                formData.append("endTime", $("#editEndTime").val());
+                formData.append("contractContent", $("#editContractContent").val());
+                formData.append("username", $("#editUsername").val());
+                var file_obj = document.getElementById('editAttachment').files[0];
+                formData.append("attachment", file_obj);
+                console.log(formData);
+            // formdata转json（后续换成字符串）
+            var jsonData = {};
+            formData.forEach((value, key) => jsonData[key] = value);
+                //提交数据到服务器
+                $.ajax({
+                    type: "POST",
+                    url: "",
+                    data: formData,//提交数据
+                    contentType : "application/json",
+                    dataType: "json",//回调函数接收数据的格式
+                    success: function (data) {
+                        alert(data.msg);
+                        count++;
+                    },
+                    error: function (msg) {
+                        alert(msg);
+                        console.log("request fail:" + msg);
+                    }
+                });
+            });
+            //    -----------------------------------
+            //    ======================================
+        })
+        //点击取消修改
+        $("#cancelEdit").click(function () {
+            console.log('cancelEdit');
+            $("#editContractModal").find('input').val('')
+        })
+        //删除按钮
+        $('#btn_delete').click(function () {
+            if (table.rows('.selected').data().length) {
+                $("#deleteContract").modal()
+            } else {
+                alert('请选择项目');
+            }
+        });
+        //确认删除
+        $('#delete').click(function () {
+            var contractId = table.rows('.selected').data()[1];
+            //=====================================================
+            //删除提交请求
+            //提交数据到服务器
+                $.ajax({
+                    type: "POST",
+                    url: "",
+                    data: {'contractId':contractId},//提交数据
+                    contentType : "application/json",
+                    dataType: "json",//回调函数接收数据的格式
+                    success: function (data) {
+                        alert(data.msg);
+                        count++;
+                    },
+                    error: function (msg) {
+                        alert(msg);
+                        console.log("request fail:" + msg);
+                    }
+                });
+            //=====================================================
+            table.row('.selected').remove().draw(false);
+        });
+        //预览按钮
+        $('#btn_check').click(function () {
+            console.log('check');
+            if (table.rows('.selected').data().length) {
+                $("#checkContractInfo").modal()
+                var rowData = table.rows('.selected').data()[0];
+                var inputs = $("#checkContractModal").find('input')
+                for (var i = 0; i < inputs.length - 1; i++) {
+                    if (i == 5) {
+                        $("#checkContractContent").val(rowData[i + 1]);
+                        console.log(rowData[i + 1])
+                        $(inputs[i]).val(rowData[i + 2])
+                    } else {
+                        $(inputs[i]).val(rowData[i + 1])
+                    }
+
+                }
+            } else {
+                alert('请选择项目');
+            }
+        })
+        //预览确定按钮
+        $("#checkConfirm").click(function () {
+            console.log('checkConfirm');
+            $("#checkContractModal").find('input').val('')
+        })
+
+        //删除按钮
+        $('#btn_allot').click(function () {
+            if (table.rows('.selected').data().length) {
+                window.location.href = 'allot.html';
+            } else {
+                alert('请选择项目');
+            }
+        });
+
+
+    })
+
+    function jsonToArray(data) {
+        var dataArray = [];
+        var i = 0;
+        for (i = 0; i < data.length; i++) {
+            var dataLine = [];
+            var d = data[i];
+            dataLine.push('')
+            dataLine.push(d.contract.contractId);
+            dataLine.push(d.contract.contractName);
+            dataLine.push(d.contract.customer);
+            dataLine.push(d.contract.endTime);
+            dataLine.push(d.contract.beginTime);
+            dataLine.push(d.contract.contractContent);
+            dataLine.push(d.contract.username);
+            console.log(dataLine);
+            dataArray.push(dataLine)
+        }
+        return dataArray;
+    }
+
+    function drawTable (url){
+        $(function () {
+            $.ajax({
+                url: url,
+                type: 'get',//请求方式
+                contentType : "application/json",
+                dataType: 'json',
+                success: function (repData) {
+                    data = repData;
+                    table = $('#Contracts').DataTable({
+                        data: jsonToArray(data),
+                        "pagingType": "full_numbers",
+                        "bSort": true,//排序
+                        'searching': true,//不带搜索
+                        "language": {
+                            "sProcessing": "处理中...",
+                            "sLengthMenu": "显示 _MENU_ 项结果",
+                            "sZeroRecords": "没有匹配结果",
+                            "sInfo": "显示第 _START_ 至 _END_ 项结果，共 _TOTAL_ 项",
+                            "sInfoEmpty": "显示第 0 至 0 项结果，共 0 项",
+                            "sInfoFiltered": "(由 _MAX_ 项结果过滤)",
+                            "sInfoPostFix": "",
+                            "sSearch": "搜索:",
+                            "sUrl": "",
+                            "sEmptyTable": "表中数据为空",
+                            "sLoadingRecords": "载入中...",
+                            "sInfoThousands": ",",
+                            "oPaginate": {
+                                "sFirst": "首页",
+                                "sPrevious": "上页",
+                                "sNext": "下页",
+                                "sLast": "末页"
+                            },
+                            "oAria": {
+                                "sSortAscending": ": 以升序排列此列",
+                                "sSortDescending": ": 以降序排列此列"
+                            }
+                        },
+                        "columnDefs": [{
+                            "searchable": false,
+                            "orderable": true,
+                            "targets": 0
+                        }],
+                        "order": [[1, 'asc']]
+                    });
+                    table.on('order.dt search.dt', function () {
+                        table.column(0, {
+                            search: 'applied',
+                            order: 'applied'
+                        }).nodes().each(function (cell, i) {
+                            cell.innerHTML = i + 1;
+                        });
+                    }).draw();
+                }
+            })
+        })
+
+    }
+</script>
+</html>
