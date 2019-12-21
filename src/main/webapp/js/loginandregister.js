@@ -14,7 +14,7 @@ function log_in(){
 		 		contentType:"application/json; charset=UTF-8",
 				 dataType : 'text',
 	            success:function(data){
-					var url="index.html?auth="+data;
+					var url="main.html?auth="+data;
 					window.location.href=url;
 	            }
 	        });

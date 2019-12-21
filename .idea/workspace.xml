@@ -6,321 +6,58 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="004e472f-fa07-4e1d-8292-b54d36800f9e" name="Default Changelist" comment="整体架构，Spring框架已搭建完毕">
-      <change afterPath="$PROJECT_DIR$/.idea/ContractProject.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/example.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/example/controller/ContractController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/example/controller/ContractStateController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/example/controller/CustomerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/example/controller/RightController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/example/controller/RoleController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/example/controller/UserListController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/example/myclass/Contract.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/example/myclass/ContractState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/example/myclass/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/example/myclass/Right.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/example/myclass/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/example/myclass/finalizatips.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/example/myclass/finalize.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/example/myclass/listRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/example/myclass/pending.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/AllocateManage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Approve_draft.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/ContractManage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/CountersignManage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/CustomerManage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/DataTables/DataTables-1.10.20/css/dataTables.bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/DataTables/DataTables-1.10.20/css/dataTables.bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/DataTables/DataTables-1.10.20/css/dataTables.bootstrap4.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/DataTables/DataTables-1.10.20/css/dataTables.bootstrap4.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/DataTables/DataTables-1.10.20/css/dataTables.foundation.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/DataTables/DataTables-1.10.20/css/dataTables.foundation.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/DataTables/DataTables-1.10.20/css/dataTables.jqueryui.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/DataTables/DataTables-1.10.20/css/dataTables.jqueryui.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/DataTables/DataTables-1.10.20/css/dataTables.semanticui.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/DataTables/DataTables-1.10.20/css/dataTables.semanticui.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/DataTables/DataTables-1.10.20/css/jquery.dataTables.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/DataTables/DataTables-1.10.20/css/jquery.dataTables.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/DataTables/DataTables-1.10.20/images/sort_asc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/DataTables/DataTables-1.10.20/images/sort_asc_disabled.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/DataTables/DataTables-1.10.20/images/sort_both.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/DataTables/DataTables-1.10.20/images/sort_desc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/DataTables/DataTables-1.10.20/images/sort_desc_disabled.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/DataTables/DataTables-1.10.20/js/dataTables.bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/DataTables/DataTables-1.10.20/js/dataTables.bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/DataTables/DataTables-1.10.20/js/dataTables.bootstrap4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/DataTables/DataTables-1.10.20/js/dataTables.bootstrap4.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/DataTables/DataTables-1.10.20/js/dataTables.foundation.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/DataTables/DataTables-1.10.20/js/dataTables.foundation.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/DataTables/DataTables-1.10.20/js/dataTables.jqueryui.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/DataTables/DataTables-1.10.20/js/dataTables.jqueryui.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/DataTables/DataTables-1.10.20/js/dataTables.semanticui.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/DataTables/DataTables-1.10.20/js/dataTables.semanticui.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/DataTables/DataTables-1.10.20/js/jquery.dataTables.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/DataTables/DataTables-1.10.20/js/jquery.dataTables.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/DataTables/datatables.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/DataTables/datatables.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/DataTables/datatables.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/DataTables/datatables.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/DataTables/jQuery-3.3.1/jquery-3.3.1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/DataTables/jQuery-3.3.1/jquery-3.3.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/DraftContract.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/JSON/cycle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/JSON/json2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Pending_draft.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/ProcessManage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/RightManage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/RoleManage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Sign_draft.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/UserManage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/allot.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/bootstrap/css/bootstrap-theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/bootstrap/css/bootstrap-theme.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/bootstrap/css/bootstrap-theme.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/bootstrap/css/bootstrap-theme.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/bootstrap/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/bootstrap/css/bootstrap.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/bootstrap/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/bootstrap/css/bootstrap.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/bootstrap/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/bootstrap/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/bootstrap/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/bootstrap/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/bootstrap/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/bootstrap/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/bootstrap/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/bootstrap/js/jquery-3.4.1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/bootstrap/js/jquery-3.4.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/bootstrap/js/npm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/mvo4ken.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/style_min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/data.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/imgcut01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/imgcut02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/imgcut03.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/imgcut04.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/imgcut05.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/imgcut06.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/imgcut07.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/main(1).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/main(2).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/main(3).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/main(4).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/main.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/work01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/work02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/work03.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/work04.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/index2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/Pending_draft.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/analytics.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/app_min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/contract.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/jquery-2.2.4.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/jquery-3.3.1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/jquery.dataTables.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/loginandregister.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/plugin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/polyfill.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/main_css/demo.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/main_css/normalize.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/main_js/demo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/main_js/demo1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/main_js/demo2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/main_js/demo3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/main_js/demo4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/main_js/demo5.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/main_js/demo6.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/main_js/easings.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/register.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/webapp.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/AllocateManage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/Approve_draft.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/ContractManage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/CountersignManage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/CustomerManage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/DataTables/DataTables-1.10.20/css/dataTables.bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/DataTables/DataTables-1.10.20/css/dataTables.bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/DataTables/DataTables-1.10.20/css/dataTables.bootstrap4.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/DataTables/DataTables-1.10.20/css/dataTables.bootstrap4.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/DataTables/DataTables-1.10.20/css/dataTables.foundation.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/DataTables/DataTables-1.10.20/css/dataTables.foundation.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/DataTables/DataTables-1.10.20/css/dataTables.jqueryui.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/DataTables/DataTables-1.10.20/css/dataTables.jqueryui.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/DataTables/DataTables-1.10.20/css/dataTables.semanticui.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/DataTables/DataTables-1.10.20/css/dataTables.semanticui.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/DataTables/DataTables-1.10.20/css/jquery.dataTables.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/DataTables/DataTables-1.10.20/css/jquery.dataTables.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/DataTables/DataTables-1.10.20/images/sort_asc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/DataTables/DataTables-1.10.20/images/sort_asc_disabled.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/DataTables/DataTables-1.10.20/images/sort_both.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/DataTables/DataTables-1.10.20/images/sort_desc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/DataTables/DataTables-1.10.20/images/sort_desc_disabled.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/DataTables/DataTables-1.10.20/js/dataTables.bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/DataTables/DataTables-1.10.20/js/dataTables.bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/DataTables/DataTables-1.10.20/js/dataTables.bootstrap4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/DataTables/DataTables-1.10.20/js/dataTables.bootstrap4.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/DataTables/DataTables-1.10.20/js/dataTables.foundation.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/DataTables/DataTables-1.10.20/js/dataTables.foundation.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/DataTables/DataTables-1.10.20/js/dataTables.jqueryui.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/DataTables/DataTables-1.10.20/js/dataTables.jqueryui.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/DataTables/DataTables-1.10.20/js/dataTables.semanticui.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/DataTables/DataTables-1.10.20/js/dataTables.semanticui.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/DataTables/DataTables-1.10.20/js/jquery.dataTables.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/DataTables/DataTables-1.10.20/js/jquery.dataTables.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/DataTables/datatables.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/DataTables/datatables.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/DataTables/datatables.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/DataTables/datatables.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/DataTables/jQuery-3.3.1/jquery-3.3.1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/DataTables/jQuery-3.3.1/jquery-3.3.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/DraftContract.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/JSON/cycle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/JSON/json2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/Pending_draft.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/ProcessManage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/RightManage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/RoleManage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/Sign_draft.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/UserManage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/WEB-INF/classes/example.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/WEB-INF/classes/example/common/testdao.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/WEB-INF/classes/example/controller/ContractController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/WEB-INF/classes/example/controller/ContractStateController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/WEB-INF/classes/example/controller/CustomerController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/WEB-INF/classes/example/controller/RightController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/WEB-INF/classes/example/controller/RoleController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/WEB-INF/classes/example/controller/UserListController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/WEB-INF/classes/example/myclass/Contract.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/WEB-INF/classes/example/myclass/ContractState.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/WEB-INF/classes/example/myclass/Customer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/WEB-INF/classes/example/myclass/Right.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/WEB-INF/classes/example/myclass/Role.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/WEB-INF/classes/example/myclass/finalizatips.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/WEB-INF/classes/example/myclass/finalize.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/WEB-INF/classes/example/myclass/listRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/WEB-INF/classes/example/myclass/pending.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/WEB-INF/statics/css/bootstrap-theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/WEB-INF/statics/css/bootstrap-theme.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/WEB-INF/statics/css/bootstrap-theme.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/WEB-INF/statics/css/bootstrap-theme.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/WEB-INF/statics/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/WEB-INF/statics/css/bootstrap.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/WEB-INF/statics/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/WEB-INF/statics/css/bootstrap.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/WEB-INF/statics/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/WEB-INF/statics/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/WEB-INF/statics/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/WEB-INF/statics/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/WEB-INF/statics/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/WEB-INF/statics/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/WEB-INF/statics/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/WEB-INF/statics/js/jquery-3.4.1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/WEB-INF/statics/js/jquery-3.4.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/WEB-INF/statics/js/npm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/allot.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/bootstrap/css/bootstrap-theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/bootstrap/css/bootstrap-theme.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/bootstrap/css/bootstrap-theme.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/bootstrap/css/bootstrap-theme.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/bootstrap/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/bootstrap/css/bootstrap.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/bootstrap/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/bootstrap/css/bootstrap.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/bootstrap/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/bootstrap/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/bootstrap/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/bootstrap/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/bootstrap/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/bootstrap/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/bootstrap/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/bootstrap/js/jquery-3.4.1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/bootstrap/js/jquery-3.4.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/bootstrap/js/npm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/css/mvo4ken.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/css/style_min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/img/imgcut01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/img/imgcut02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/img/imgcut03.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/img/imgcut04.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/img/imgcut05.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/img/imgcut06.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/img/imgcut07.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/img/main(1).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/img/main(2).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/img/main(3).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/img/main(4).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/img/main.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/img/work01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/img/work02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/img/work03.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/img/work04.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/index2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/js/Pending_draft.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/js/analytics.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/js/app_min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/js/contract.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/js/jquery-2.2.4.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/js/jquery-3.3.1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/js/jquery.dataTables.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/js/js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/js/loginandregister.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/js/plugin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/js/polyfill.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/main_css/demo.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/main_css/normalize.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/main_js/demo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/main_js/demo1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/main_js/demo2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/main_js/demo3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/main_js/demo4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/main_js/demo5.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/main_js/demo6.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/main_js/easings.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/register.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/ContractManagement/webapp.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/example/controller/ContractController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/example/controller/ContractStateController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/example/controller/CustomerController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/example/controller/RightController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/example/controller/RoleController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/example/controller/UserListController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/example/myclass/Contract.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/example/myclass/ContractState.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/example/myclass/Customer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/example/myclass/Right.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/example/myclass/Role.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/example/myclass/finalizatips.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/example/myclass/finalize.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/example/myclass/listRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/example/myclass/pending.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/ContractManagement_war_exploded.xml" beforeDir="false" />
+    <list default="true" id="004e472f-fa07-4e1d-8292-b54d36800f9e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2cc0669f-ff5d-4aa2-85c8-0b168be31570.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/2cc0669f-ff5d-4aa2-85c8-0b168be31570.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/controller/testController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/controller/testController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ContractManagement.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/ContractManagement.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ContractManagement/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/ContractManagement/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ContractManagement/WEB-INF/classes/example/controller/testController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ContractManagement/WEB-INF/classes/example/controller/testController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ContractManagement/WEB-INF/classes/example/dao/testDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ContractManagement/WEB-INF/classes/example/dao/testDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ContractManagement/WEB-INF/classes/example/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ContractManagement/WEB-INF/classes/example/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ContractManagement/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/ContractManagement/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ContractManagement/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/ContractManagement/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/example/controller/testController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/example/controller/testController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/example/dao/testDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/example/dao/testDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp.zip" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Approve_draft.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Approve_draft.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ContractManage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ContractManage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/CustomerManage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/CustomerManage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Pending_draft.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Pending_draft.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ProcessManage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ProcessManage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/RightManage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/RightManage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/RoleManage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/RoleManage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Sign_draft.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Sign_draft.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/UserManage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/UserManage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/mvo4ken.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/Pending_draft.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/contract.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/loginandregister.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/loginandregister.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/polyfill.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/main_css/demo.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/main_css/demo.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/main_js/demo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/main_js/demo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/main_js/easings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/main_js/easings.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/register.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ContractManagement/Approve_draft.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/ContractManagement/Approve_draft.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ContractManagement/ContractManage.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/ContractManagement/ContractManage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ContractManagement/CustomerManage.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/ContractManagement/CustomerManage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ContractManagement/Pending_draft.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/ContractManagement/Pending_draft.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ContractManagement/ProcessManage.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/ContractManagement/ProcessManage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ContractManagement/RightManage.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/ContractManagement/RightManage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ContractManagement/RoleManage.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/ContractManagement/RoleManage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ContractManagement/Sign_draft.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/ContractManagement/Sign_draft.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ContractManagement/UserManage.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/ContractManagement/UserManage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ContractManagement/css/mvo4ken.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ContractManagement/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/ContractManagement/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ContractManagement/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ContractManagement/index2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ContractManagement/js/Pending_draft.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ContractManagement/js/contract.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ContractManagement/js/js" beforeDir="false" afterPath="$PROJECT_DIR$/target/ContractManagement/js/js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ContractManagement/js/loginandregister.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/ContractManagement/js/loginandregister.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ContractManagement/js/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ContractManagement/js/polyfill.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ContractManagement/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ContractManagement/main_css/demo.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/ContractManagement/main_css/demo.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ContractManagement/main_js/demo.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/ContractManagement/main_js/demo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ContractManagement/main_js/easings.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/ContractManagement/main_js/easings.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ContractManagement/register.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -415,18 +152,19 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\IDEAProject\ContractProject\src\main\webapp" />
+      <recent name="E:\IDEAProject\ContractProject\src\main\webapp\css" />
+      <recent name="E:\IDEAProject\ContractProject\src\main\webapp\img" />
+      <recent name="E:\IDEAProject\ContractProject\src\main\webapp\js" />
+      <recent name="E:\IDEAProject\ContractProject\src\main\java\example\myclass" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\IDEAProject\ContractProject\src\main\webapp\list\css" />
+      <recent name="E:\IDEAProject\ContractProject\src\main\webapp\list\dist\lib" />
       <recent name="E:\IDEAProject\ContractProject\src\main\webapp" />
       <recent name="E:\IDEAProject\ContractProject\src\main\webapp\JSON" />
       <recent name="E:\IDEAProject\ContractProject\src\main\webapp\mengchuize" />
-      <recent name="E:\IDEAprojects\ContractManagement\src\main\webapp\WEB-INF" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\IDEAProject\ContractProject\src\main\webapp" />
-      <recent name="E:\IDEAProject\ContractProject\src\main\java\example\myclass" />
-      <recent name="E:\IDEAProject\ContractProject\src\main\java\example\controller" />
-      <recent name="E:\IDEAProject\ContractProject\src\main\webapp\bootstrap" />
-      <recent name="E:\IDEAprojects\ContractManagement\src\main\webapp\WEB-INF\statics\js" />
     </key>
   </component>
   <component name="RunManager">
@@ -559,7 +297,12 @@
       <workItem from="1576386422576" duration="5839000" />
       <workItem from="1576474723795" duration="16301000" />
       <workItem from="1576578727878" duration="12281000" />
-      <workItem from="1576639934887" duration="10814000" />
+      <workItem from="1576639934887" duration="21013000" />
+      <workItem from="1576671145177" duration="30485000" />
+      <workItem from="1576747655425" duration="4639000" />
+      <workItem from="1576817618231" duration="3248000" />
+      <workItem from="1576826131121" duration="56000" />
+      <workItem from="1576852168303" duration="13842000" />
     </task>
     <task id="LOCAL-00001" summary="整体架构，Spring框架已搭建完毕">
       <created>1575177245791</created>
@@ -575,7 +318,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575184386515</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="整体架构，Spring框架已搭建完毕">
+      <created>1576657888847</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1576657888847</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -602,10 +352,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="360" y="73" key="#Tomcat_Server/0.0.1536.824@0.0.1536.824" timestamp="1575903977911" />
-    <state x="326" y="117" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1576159221216">
+    <state x="326" y="117" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1576659255873">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="326" y="117" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1576159221216" />
+    <state x="326" y="117" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1576659255873" />
     <state x="489" y="221" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1575904439807">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -614,62 +364,66 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="463" y="120" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable/0.0.1536.824@0.0.1536.824" timestamp="1575922073300" />
-    <state x="499" y="162" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1576655868784">
+    <state x="499" y="162" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1576714709481">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="162" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1576655868784" />
+    <state x="499" y="162" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1576714709481" />
+    <state x="385" y="10" key="CommitChangelistDialog2" timestamp="1576657883604">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="385" y="10" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1576657883604" />
     <state x="548" y="155" key="FileChooserDialogImpl" timestamp="1575954615401">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="548" y="155" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1575954615401" />
-    <state width="1024" height="181" key="GridCell.Tab.0.bottom" timestamp="1576657656369">
+    <state width="1024" height="206" key="GridCell.Tab.0.bottom" timestamp="1576821383827">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="181" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1576657656369" />
-    <state width="1024" height="181" key="GridCell.Tab.0.center" timestamp="1576657656369">
+    <state width="1024" height="206" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1576821383827" />
+    <state width="1024" height="206" key="GridCell.Tab.0.center" timestamp="1576821383827">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="181" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1576657656369" />
-    <state width="1024" height="181" key="GridCell.Tab.0.left" timestamp="1576657656369">
+    <state width="1024" height="206" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1576821383827" />
+    <state width="1024" height="206" key="GridCell.Tab.0.left" timestamp="1576821383827">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="181" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1576657656369" />
-    <state width="1024" height="181" key="GridCell.Tab.0.right" timestamp="1576657656369">
+    <state width="1024" height="206" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1576821383827" />
+    <state width="1024" height="206" key="GridCell.Tab.0.right" timestamp="1576821383827">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="181" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1576657656369" />
-    <state width="1024" height="181" key="GridCell.Tab.1.bottom" timestamp="1576657656369">
+    <state width="1024" height="206" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1576821383827" />
+    <state width="1024" height="206" key="GridCell.Tab.1.bottom" timestamp="1576821383827">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="181" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1576657656369" />
-    <state width="1024" height="181" key="GridCell.Tab.1.center" timestamp="1576657656369">
+    <state width="1024" height="206" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1576821383827" />
+    <state width="1024" height="206" key="GridCell.Tab.1.center" timestamp="1576821383827">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="181" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1576657656369" />
-    <state width="1024" height="181" key="GridCell.Tab.1.left" timestamp="1576657656369">
+    <state width="1024" height="206" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1576821383827" />
+    <state width="1024" height="206" key="GridCell.Tab.1.left" timestamp="1576821383827">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="181" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1576657656369" />
-    <state width="1024" height="181" key="GridCell.Tab.1.right" timestamp="1576657656369">
+    <state width="1024" height="206" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1576821383827" />
+    <state width="1024" height="206" key="GridCell.Tab.1.right" timestamp="1576821383827">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="181" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1576657656369" />
-    <state width="1024" height="181" key="GridCell.Tab.2.bottom" timestamp="1576657656369">
+    <state width="1024" height="206" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1576821383827" />
+    <state width="1024" height="206" key="GridCell.Tab.2.bottom" timestamp="1576821383828">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="181" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1576657656369" />
-    <state width="1024" height="181" key="GridCell.Tab.2.center" timestamp="1576657656369">
+    <state width="1024" height="206" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1576821383828" />
+    <state width="1024" height="206" key="GridCell.Tab.2.center" timestamp="1576821383827">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="181" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1576657656369" />
-    <state width="1024" height="181" key="GridCell.Tab.2.left" timestamp="1576657656369">
+    <state width="1024" height="206" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1576821383827" />
+    <state width="1024" height="206" key="GridCell.Tab.2.left" timestamp="1576821383827">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="181" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1576657656369" />
-    <state width="1024" height="181" key="GridCell.Tab.2.right" timestamp="1576657656369">
+    <state width="1024" height="206" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1576821383827" />
+    <state width="1024" height="206" key="GridCell.Tab.2.right" timestamp="1576821383828">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="181" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1576657656369" />
+    <state width="1024" height="206" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1576821383828" />
     <state x="299" y="70" key="Maven.ArtifactSearchDialog" timestamp="1575981752983">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -678,22 +432,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1576062580318" />
-    <state x="361" y="148" key="Vcs.Push.Dialog.v2" timestamp="1576657750271">
+    <state x="361" y="148" key="Vcs.Push.Dialog.v2" timestamp="1576905661851">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="148" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1576657750271" />
-    <state x="453" y="251" key="com.intellij.ide.util.TipDialog" timestamp="1576639965458">
+    <state x="361" y="148" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1576905661851" />
+    <state x="453" y="251" key="com.intellij.ide.util.TipDialog" timestamp="1576852368111">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="453" y="251" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1576639965458" />
+    <state x="453" y="251" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1576852368111" />
     <state x="564" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1576657618314">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="564" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1576657618314" />
-    <state x="457" y="214" key="git4idea.merge.GitPullDialog" timestamp="1576657637317">
+    <state x="457" y="214" key="git4idea.merge.GitPullDialog" timestamp="1576905559094">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="457" y="214" key="git4idea.merge.GitPullDialog/0.0.1536.824@0.0.1536.824" timestamp="1576657637317" />
+    <state x="457" y="214" key="git4idea.merge.GitPullDialog/0.0.1536.824@0.0.1536.824" timestamp="1576905559094" />
     <state x="178" y="28" key="new project wizard" timestamp="1575952931422">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -702,9 +456,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1576500218039" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1576493296240">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1576870644681">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1576493296240" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1576870644681" />
   </component>
 </project>

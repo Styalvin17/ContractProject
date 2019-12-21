@@ -94,42 +94,6 @@
             }
             return null;
         };
-        window.onload=function () {
-            alert("begin");
-            var auth=getParams("auth");
-
-            alert("begin");
-            for(var i=0;i<auth.split(",").length;i++){
-                if(auth.split(",")[i]!=null){
-                    var url=""
-                    var mynav=document.getElementById("js-nav");
-                    var framea = document.createElement("a");
-                    var framespan = document.createElement("span");
-                    framespan.innerHTML=auth.split(",")[i];
-                    framea.setAttribute("class","demo");
-                    switch (auth.split(",")[i]){
-                        case 1:url="";break;
-                        case 2:url="";break;
-                        case 3:url="Pending_draft";break;
-                        case 4:url="Approve_draft";break;
-                        case 5:url="Sign_draft";break;
-                        case 6:url="CustomerManage";break;
-                        case 7:url="RoleManage";break;
-                        case 8:url="RightManage";break;ContractManage
-                        case 9:url="ContractManage";break;
-                        case 10:url="ProcessManage";break;
-                        case 11:url="RightManage";break;
-                    }
-                    framea.setAttribute("href",url+".html?username="+getParams("username")+"&&auth="+auth);
-                    framea.appendChild(framespan);
-
-                    mynav.appendChild(framea);
-                }
-
-
-            }
-            alert(navhtml);
-        };
 
     </script>
 </head>
@@ -137,70 +101,12 @@
 
 <main class="main main--demo-1">
 
-    <div class="content content--fixed">
-
-        <nav id="js-nav" class="demos">
-
-            <a class="demo demo--current" href="main.index.html"><span>首页</span></a>
-
-        </nav>
-
+    <div style="background-color: #efcb7b" id="bar-position" class="dotstyle dotstyle-tooltip">
+        <ul style="background-color: #efcb7b" id="view-ul">
+        </ul>
     </div>
 
     <div class="content content--demo-1">
-        <div class="hamburger js-hover">
-            <div class="hamburger__line hamburger__line--01">
-                <div class="hamburger__line-in hamburger__line-in--01"></div>
-            </div>
-            <div class="hamburger__line hamburger__line--02">
-                <div class="hamburger__line-in hamburger__line-in--02"></div>
-            </div>
-            <div class="hamburger__line hamburger__line--03">
-                <div class="hamburger__line-in hamburger__line-in--03"></div>
-            </div>
-            <div class="hamburger__line hamburger__line--cross01">
-                <div class="hamburger__line-in hamburger__line-in--cross01"></div>
-            </div>
-            <div class="hamburger__line hamburger__line--cross02">
-                <div class="hamburger__line-in hamburger__line-in--cross02"></div>
-            </div>
-        </div>
-
-        <div id="wrapper">
-            <div class="main2">
-                <table id="table" class="display">
-                    <thead>
-                    <tr>
-                        <th>contractName</th>
-                        <th>contractState</th>
-                        <th>endTime</th>
-                        <th>details</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-
-                    </tbody>
-                </table>
-
-                <div id="fade" class="black_overlay">
-                </div>
-                <div id="DetailDiv" class="white_content">
-
-                    <form action="" method="post">
-                        <fieldset>
-                            <legend align="left">合同状态信息</legend>
-                            合同名称：<span id="cName"></span><br>
-                            合同状态：<span id="cState"></span><br>
-                            完成时间：<span id="cEndTime"></span><br>
-                        </fieldset>
-                    </form>
-
-                    <div style="text-align: right; cursor: default; height: 40px;" id="move">
-                        <input type="button" value="关闭" onclick="CloseDiv('DetailDiv','fade')">
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <div class="global-menu">
             <div class="global-menu__wrap">
@@ -214,9 +120,61 @@
             <path class="shape-overlays__path"></path>
         </svg>
     </div>
-
+    <div class="hamburger js-hover">
+        <div class="hamburger__line hamburger__line--01">
+            <div class="hamburger__line-in hamburger__line-in--01"></div>
+        </div>
+        <div class="hamburger__line hamburger__line--02">
+            <div class="hamburger__line-in hamburger__line-in--02"></div>
+        </div>
+        <div class="hamburger__line hamburger__line--03">
+            <div class="hamburger__line-in hamburger__line-in--03"></div>
+        </div>
+        <div class="hamburger__line hamburger__line--cross01">
+            <div class="hamburger__line-in hamburger__line-in--cross01"></div>
+        </div>
+        <div class="hamburger__line hamburger__line--cross02">
+            <div class="hamburger__line-in hamburger__line-in--cross02"></div>
+        </div>
+    </div>
 </main>
+<div class="mypositionfixed">
+    <div id="wrapper">
+        <div class="main2">
+            <table id="table" class="display">
+                <thead>
+                <tr>
+                    <th>contractName</th>
+                    <th>contractState</th>
+                    <th>endTime</th>
+                    <th>details</th>
+                </tr>
+                </thead>
+                <tbody>
 
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>
+<div id="fade" class="black_overlay">
+</div>
+<div id="DetailDiv" class="white_content">
+
+    <form action="" method="post">
+        <fieldset>
+            <legend align="left">合同状态信息</legend>
+            合同名称：<span id="cName"></span><br>
+            合同状态：<span id="cState"></span><br>
+            完成时间：<span id="cEndTime"></span><br>
+        </fieldset>
+    </form>
+
+    <div style="text-align: right; cursor: default; height: 40px;" id="move">
+        <input type="button" value="关闭" onclick="CloseDiv('DetailDiv','fade')">
+    </div>
+</div>
 <script src="main_js/demo.js"></script>
 <script src="main_js/easings.js"></script>
 <script src="main_js/demo1.js"></script>
@@ -230,6 +188,39 @@
 <script type="text/javascript">
 
     $(function(){
+        alert("begin");
+        var auth=getParams("auth");
+
+        alert("begin");
+        for(var i=0;i<auth.split(",").length;i++){
+            if(auth.split(",")[i]!=null){
+                var url=""
+                var mynav=document.getElementById("js-nav");
+                var framea = document.createElement("a");
+                var framespan = document.createElement("span");
+                framespan.innerHTML=auth.split(",")[i];
+                framea.setAttribute("class","demo");
+                switch (auth.split(",")[i]){
+                    case 1:url="";break;
+                    case 2:url="";break;
+                    case 3:url="Pending_draft";break;
+                    case 4:url="Approve_draft";break;
+                    case 5:url="Sign_draft";break;
+                    case 6:url="CustomerManage";break;
+                    case 7:url="RoleManage";break;
+                    case 8:url="RightManage";break;ContractManage
+                    case 9:url="ContractManage";break;
+                    case 10:url="ProcessManage";break;
+                    case 11:url="RightManage";break;
+                }
+                framea.setAttribute("href",url+".html?username="+getParams("username")+"&&auth="+auth);
+                framea.appendChild(framespan);
+
+                mynav.appendChild(framea);
+            }
+
+
+        }
         $("#table").on("click", ":button", function(event){
             alert($(this).closest("tr").find("td").eq(0).text());
             ShowDiv('DetailDiv','fade');

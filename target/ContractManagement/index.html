@@ -12,7 +12,42 @@
     <script type="text/javascript" async="" src="bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/loginandregister.js"></script>
     <link rel="stylesheet" type="text/css" href="main_css/demo.css" />
+    <script type="text/javascript" src="js/jigsaw.js"></script>
+    <link rel="stylesheet" href="css/jigsaw.css">
+    <link rel="stylesheet" type="text/css" href="css/login.css" />
+    <link rel='stylesheet prefetch' href='buttons_css/reset.css'>
+    <link rel="stylesheet" type="text/css" href="buttons_css/default.css">
+    <link rel="stylesheet" type="text/css" href="buttons_css/styles.css">
 
+    <!--yanzhengma-->
+    <style>
+        .container {
+            width: 310px;
+            margin: 100px auto;
+
+        }
+        input {
+            display: block;
+            width: 290px;
+            line-height: 40px;
+            margin: 10px 0;
+            padding: 0 10px;
+            outline: none;
+            border:1px solid #c8cccf;
+            border-radius: 4px;
+            color:#6a6f77;
+        }
+        #msg {
+            width: 100%;
+            line-height: 40px;
+            font-size: 14px;
+            text-align: center;
+        }
+        a:link,a:visited,a:hover,a:active {
+            margin-left: 100px;
+            color: #0366D6;
+        }
+    </style>
 <!--    <script>document.documentElement.className = 'js';</script>-->
     <script>
         var navhtml='';
@@ -24,41 +59,41 @@
             }
             return null;
         };
-        window.onload=function () {
-
-            var auth=getParams("auth");
-
-            for(var i=0;i<auth.split(",").length;i++){
-                if(auth.split(",")[i]!=null){
-                    var url=""
-                    var mynav=document.getElementById("js-nav");
-                    var framea = document.createElement("a");
-                    var framespan = document.createElement("span");
-                    framespan.innerHTML=auth.split(",")[i];
-                    framea.setAttribute("class","demo");
-                    switch (auth.split(",")[i]){
-                        case "1":url="";break;
-                        case "2":url="";break;
-                        case "3":url="Pending_draft";break;
-                        case "4":url="Approve_draft";break;
-                        case "5":url="Sign_draft";break;
-                        case "6":url="CustomerManage";break;
-                        case "7":url="RoleManage";break;
-                        case "8":url="RightManage";break;
-                        case "9":url="ContractManage";break;
-                        case "10":url="ProcessManage";break;
-                        case "11":url="RightManage";break;
-                    }
-                    framea.setAttribute("href",url+".html?username="+getParams("username")+"&&auth="+auth);
-                    framea.appendChild(framespan);
-
-                    mynav.appendChild(framea);
-                }
-
-
-            }
-
-        };
+        // window.onload=function () {
+        //
+        //     var auth=getParams("auth");
+        //
+        //     for(var i=0;i<auth.split(",").length;i++){
+        //         if(auth.split(",")[i]!=null){
+        //             var url=""
+        //             var mynav=document.getElementById("js-nav");
+        //             var framea = document.createElement("a");
+        //             var framespan = document.createElement("span");
+        //             framespan.innerHTML=auth.split(",")[i];
+        //             framea.setAttribute("class","demo");
+        //             switch (auth.split(",")[i]){
+        //                 case "1":url="";break;
+        //                 case "2":url="";break;
+        //                 case "3":url="Pending_draft";break;
+        //                 case "4":url="Approve_draft";break;
+        //                 case "5":url="Sign_draft";break;
+        //                 case "6":url="CustomerManage";break;
+        //                 case "7":url="RoleManage";break;
+        //                 case "8":url="RightManage";break;
+        //                 case "9":url="ContractManage";break;
+        //                 case "10":url="ProcessManage";break;
+        //                 case "11":url="RightManage";break;
+        //             }
+        //             framea.setAttribute("href",url+".html?username="+getParams("username")+"&&auth="+auth);
+        //             framea.appendChild(framespan);
+        //
+        //             mynav.appendChild(framea);
+        //         }
+        //
+        //
+        //     }
+        //
+        // };
 
     </script>
 </head>
@@ -66,105 +101,198 @@
 
 <main class="main main--demo-1">
 
-    <div class="content content--fixed">
-
-        <nav id="js-nav" class="demos">
-
-            <a class="demo demo--current" href="index.html"><span>首页</span></a>
-
-        </nav>
-
-    </div>
 
     <div class="content content--demo-1">
-        <div class="hamburger js-hover">
-            <div class="hamburger__line hamburger__line--01">
-                <div class="hamburger__line-in hamburger__line-in--01"></div>
-            </div>
-            <div class="hamburger__line hamburger__line--02">
-                <div class="hamburger__line-in hamburger__line-in--02"></div>
-            </div>
-            <div class="hamburger__line hamburger__line--03">
-                <div class="hamburger__line-in hamburger__line-in--03"></div>
-            </div>
-            <div class="hamburger__line hamburger__line--cross01">
-                <div class="hamburger__line-in hamburger__line-in--cross01"></div>
-            </div>
-            <div class="hamburger__line hamburger__line--cross02">
-                <div class="hamburger__line-in hamburger__line-in--cross02"></div>
-            </div>
-        </div>
-        <div class="demo-title demo-title--demo-1">Hello!</div>
+
+
         <svg class="shape-overlays" viewBox="0 0 100 100" preserveAspectRatio="none">
             <path class="shape-overlays__path"></path>
             <path class="shape-overlays__path"></path>
             <path class="shape-overlays__path"></path>
         </svg>
-        <div class="global-menu__item global-menu__item--demo-1" style="font-size: small">
-            <div>
-                <div class="input-group">
-                    <span class="input-group-addon">username</span>
-                    <input id="login_username" type="text" class="form-control">
+        <div class="global-menu">
+            <div class="global-menu__wrap">
+                <div class="global-menu__item global-menu__item--demo-1" style="font-size: small">
+<!--                    <div>-->
+<!--                        <div class="input-group">-->
+<!--                            <span class="input-group-addon">username</span>-->
+<!--                            <input id="login_username" type="text" class="form-control">-->
 
-                </div>
-                <br />
-                <br />
-                <div class="input-group">
-                    <span class="input-group-addon">password</span>
-                    <input id="login_password" type="text" class="form-control">
+<!--                        </div>-->
+<!--                        <br />-->
+<!--                        <br />-->
+<!--                        <div class="input-group">-->
+<!--                            <span class="input-group-addon">password</span>-->
+<!--                            <input id="login_password" type="text" class="form-control">-->
 
+<!--                        </div>-->
+<!--                    <br />-->
+<!--                    <br /><br />-->
+<!--                    <br /><br />-->
+<!--                    <br /><br />-->
+<!--                    <br /><br />-->
+<!--                    <br /><br />-->
+<!--                    <br />-->
+<!--                        -->
+<!--                        <br />-->
+<!--                        <br />-->
+<!--                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
+<!--                        <button id="login" type="button" class="btn btn-primary" onclick="log_in()">LOGIN</button>-->
+<!--                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
+<!--                        <button id="reset" type="button" class="btn btn-info">RESET</button>-->
+
+<!--&lt;!&ndash;                    </div>&ndash;&gt;-->
+<!--                    <br />-->
+<!--                    <br /><br />-->
+
+<!--                    <br /><br />-->
+<!--                    <br />-->
+<!--                    <div>-->
+<!--                        <div class="input-group">-->
+<!--                            <span class="input-group-addon">username</span>-->
+<!--                            <input id="register_username" type="text" class="form-control">-->
+
+<!--                        </div>-->
+<!--                        <br />-->
+<!--                        <br />-->
+<!--                        <div class="input-group">-->
+<!--                            <span class="input-group-addon">password</span>-->
+<!--                            <input id="register_password" type="text" class="form-control">-->
+
+<!--                        </div>-->
+<!--                        <br />-->
+<!--                        <br />-->
+<!--                        <div class="input-group">-->
+<!--                            <span class="input-group-addon">password</span>-->
+<!--                            <input id="register_password_again" type="text" class="form-control">-->
+
+<!--                        </div>-->
+<!--                        <br />-->
+<!--                        <br />-->
+<!--                        <div class="input-group">-->
+<!--                            <span class="input-group-addon">Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>-->
+<!--                            <input id="register_Email" type="text" class="form-control">-->
+
+<!--                        </div>-->
+<!--                        <br />-->
+<!--                        <br />-->
+<!--                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
+<!--                        <button id="register" type="button" class="btn btn-primary">REGISTER</button>-->
+<!--                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
+<!--                        <button id="reset1" type="button" class="btn btn-info">RESET</button>-->
+<!--                    </div>-->
+
+
+
+
+                    <div class="contentl">
+                        <div class="form sign-in">
+                            <label>
+                                <span>用户名</span><input id="login_username" type="username" />
+                            </label>
+                            <label>
+                                <span>密码</span><input id="login_password" type="password"  />
+                            </label>
+                            <div class="container" >
+                                <div id="captcha" style="position: relative;top: -40px;"></div>
+                                <div id="msg" style="top: -40px"></div>
+                            </div>
+                        </div>
+
+                        <div class="sub-cont">
+                            <div class="img">
+                                <div class="img__text m--up">
+                                    <h2>还未注册？</h2>
+                                    <p>立即注册，发现大量机会！</p>
+                                </div>
+                                <div class="img__text m--in">
+                                    <h2>已有帐号？</h2>
+                                    <p>有帐号就登录吧，好久不见了！</p>
+                                </div>
+                                <div class="img__btn">
+                                    <span class="m--up">注 册</span>
+                                    <span class="m--in">登 录</span>
+                                </div>
+                            </div>
+                            <div class="form sign-up">
+
+                                <label>
+                                    <span>用户名</span>
+                                    <input type="text" />
+                                </label>
+                                <label>
+                                    <span>邮箱</span>
+                                    <input type="email" />
+                                </label>
+                                <label>
+                                    <span>验证码</span>
+                                    <input type="text" />
+                                </label>
+                                <label>
+                                    <span>密码</span>
+                                    <input type="password" />
+                                </label>
+                                <button type="button" class="submit">注 册</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <br />
-                <br />
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <button id="login" type="button" class="btn btn-primary" onclick="log_in()">LOGIN</button>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <button id="reset" type="button" class="btn btn-info">RESET</button>
             </div>
+        </div>
 
-            <div>
-                <div class="input-group">
-                    <span class="input-group-addon">username</span>
-                    <input id="register_username" type="text" class="form-control">
-
-                </div>
-                <br />
-                <br />
-                <div class="input-group">
-                    <span class="input-group-addon">password</span>
-                    <input id="register_password" type="text" class="form-control">
-
-                </div>
-                <br />
-                <br />
-                <div class="input-group">
-                    <span class="input-group-addon">password</span>
-                    <input id="register_password_again" type="text" class="form-control">
-
-                </div>
-                <br />
-                <br />
-                <div class="input-group">
-                    <span class="input-group-addon">Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                    <input id="register_Email" type="text" class="form-control">
-
-                </div>
-                <br />
-                <br />
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <button id="register" type="button" class="btn btn-primary">REGISTER</button>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <button id="reset1" type="button" class="btn btn-info">RESET</button>
-            </div>
+    </div>
+    <div class="hamburger js-hover">
+        <div class="hamburger__line hamburger__line--01">
+            <div class="hamburger__line-in hamburger__line-in--01"></div>
+        </div>
+        <div class="hamburger__line hamburger__line--02">
+            <div class="hamburger__line-in hamburger__line-in--02"></div>
+        </div>
+        <div class="hamburger__line hamburger__line--03">
+            <div class="hamburger__line-in hamburger__line-in--03"></div>
+        </div>
+        <div class="hamburger__line hamburger__line--cross01">
+            <div class="hamburger__line-in hamburger__line-in--cross01"></div>
+        </div>
+        <div class="hamburger__line hamburger__line--cross02">
+            <div class="hamburger__line-in hamburger__line-in--cross02"></div>
         </div>
     </div>
 
-
 </main>
 
+<script type="text/javascript">
+    jigsaw.init(document.getElementById('captcha'), function () {
+        document.getElementById('msg').innerHTML = '验证成功！'
+        alert('login');
+        var login_username=document.getElementById("login_username").value;
+        var login_password=document.getElementById("login_password").value;
+
+        var login_josn_text = {"username":login_username,"password":login_password};
+        alert('ajax');
+        $.ajax({
+
+            url : "temphome/login",
+            type : "POST",
+            async : true,
+            data : JSON.stringify(login_josn_text),
+            contentType:"application/json; charset=UTF-8",
+            dataType : 'text',
+            success:function(data){
+                var url="main.html?username="+login_username+"&&auth="+data;
+                window.location.href=url;
+            }
+        });
+    })
+
+    document.querySelector('.img__btn').addEventListener('click', function() {
+        document.querySelector('.contentl').classList.toggle('s--signup')
+    })
+</script>
 <script src="main_js/demo.js"></script>
 <script src="main_js/easings.js"></script>
 <script src="main_js/demo1.js"></script>
 
 </body>
+
 </html>
